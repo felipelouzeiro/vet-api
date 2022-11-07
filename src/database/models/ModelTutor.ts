@@ -1,4 +1,5 @@
 import { Table, Model, Column, DataType, HasMany } from 'sequelize-typescript'
+import { Address } from './ModelAddress'
 
 @Table({
   timestamps: false,
@@ -10,4 +11,7 @@ export class Tutor extends Model {
     allowNull: false,
   })
   name!: string
+
+  @HasMany(() => Address)
+  addresses!: Address[]
 }
