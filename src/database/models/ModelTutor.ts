@@ -1,5 +1,6 @@
 import { Table, Model, Column, DataType, HasMany } from 'sequelize-typescript'
 import { Address } from './ModelAddress'
+import { Contact } from './ModelContact'
 
 @Table({
   timestamps: false,
@@ -14,4 +15,7 @@ export class Tutor extends Model {
 
   @HasMany(() => Address)
   addresses!: Address[]
+
+  @HasMany(() => Contact)
+  contacts!: Contact[]
 }
