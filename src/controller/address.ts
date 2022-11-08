@@ -6,7 +6,7 @@ import schemas from '../services/schemas'
 const createAddress: RequestHandler = async (req, res, next) => {
   try {
     schemas.addressSchema.validate(req.body)
-    let newAddress = await Address.findOrCreate({ ...req.body })
+    let newAddress = await Address.create({ ...req.body })
 
     return res
       .status(201)

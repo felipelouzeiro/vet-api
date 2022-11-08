@@ -7,7 +7,7 @@ import schema from '../services/schemas/index'
 const createContact: RequestHandler = async (req, res, next) => {
   try {
     await schema.contactSchema.validate(req.body)
-    let newContact = await Contact.findOrCreate({ ...req.body })
+    let newContact = await Contact.create({ ...req.body })
 
     return res
       .status(201)
