@@ -1,15 +1,10 @@
 import { Router } from 'express'
-import {
-  createAnimal,
-  deleteAnimal,
-  listAnimals,
-  updateAnimal,
-} from '../controller/animal'
+import CAnimal from '../controller/animal'
 
 const routers = Router()
-routers.post('/', createAnimal)
-routers.get('/', listAnimals)
-routers.get('/:id', updateAnimal)
-routers.put('/:id', deleteAnimal)
+routers.post('/', CAnimal.createAnimal)
+routers.get('/', CAnimal.listAnimals)
+routers.get('/:id', CAnimal.updateAnimal)
+routers.put('/:id', CAnimal.deleteAnimal)
 
 export default routers

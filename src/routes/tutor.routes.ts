@@ -1,26 +1,22 @@
 import { Router } from 'express'
 
-import {
-  createTutor,
-  listTutors,
-  deleteTutor,
-  updateTutor,
-  findByTutor,
-} from '../controller/tutor'
+import CTutor from '../controller/tutor'
+import CAddress from '../controller/address'
+import CContact from '../controller/contact'
 
 const routers = Router()
-routers.post('/', createTutor)
-routers.get('/', listTutors)
-routers.get('/:id', findByTutor)
-routers.put('/:id', updateTutor)
-routers.delete('/:id', deleteTutor)
+routers.post('/', CTutor.createTutor)
+routers.get('/', CTutor.listTutors)
+routers.get('/:id', CTutor.findByTutor)
+routers.put('/:id', CTutor.updateTutor)
+routers.delete('/:id', CTutor.deleteTutor)
 
-routers.post('/address', createTutor)
-routers.get('/address', listTutors)
-routers.get('/address', findByTutor)
+routers.post('/address', CAddress.createAddress)
+routers.get('/address/:id', CAddress.updateAddress)
+routers.put('/address/:id', CAddress.deleteAddress)
 
-routers.put('/contact', updateTutor)
-routers.delete('/contact', deleteTutor)
-routers.delete('/contact', deleteTutor)
+routers.delete('/contact', CContact.createContact)
+routers.put('/contact/:id', CContact.updateContact)
+routers.delete('/contact/:id', CContact.deleteContact)
 
 export default routers

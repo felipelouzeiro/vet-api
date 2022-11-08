@@ -6,10 +6,6 @@ import routers from './routes'
 import connection from './database/config'
 
 const PORT = process.env.PORT
-const a = process.env.PASSWORD
-const d = process.env.DATABASE
-const b = process.env.USER
-console.info(a, b, d, PORT)
 
 const app = express()
 
