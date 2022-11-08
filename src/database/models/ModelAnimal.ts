@@ -26,7 +26,7 @@ export class Animal extends Model {
   breed!: string
 
   @ForeignKey(() => Tutor)
-  @Column
+  @Column({ allowNull: false })
   tutorId!: number
 
   @BelongsTo(() => Tutor)

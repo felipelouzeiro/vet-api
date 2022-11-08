@@ -20,7 +20,7 @@ export class Address extends Model {
   name!: string
 
   @ForeignKey(() => Tutor)
-  @Column
+  @Column({ allowNull: false })
   tutorId!: number
 
   @BelongsTo(() => Tutor)

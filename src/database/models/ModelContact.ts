@@ -20,7 +20,7 @@ export class Contact extends Model {
   phone!: string
 
   @ForeignKey(() => Tutor)
-  @Column
+  @Column({ allowNull: false })
   tutorId!: number
 
   @BelongsTo(() => Tutor)
