@@ -1,5 +1,6 @@
 import { RequestHandler } from 'express'
 import { Address } from '../database/models/ModelAddress'
+import { Contact } from '../database/models/ModelContact'
 
 import { Tutor } from '../database/models/ModelTutor'
 
