@@ -9,6 +9,7 @@ Esse projeto é uma aplicação JavaScript utilizando Node.js que se comunica at
 - typescript;
 - sequelize e sequelize-typescript;
 - yup;
+- pg;
 - express.
 
 ## Fluxos
@@ -73,6 +74,6 @@ _A collection associada do postman contém exemplos de requisição._
 
 - Certifique-se de que seu banco de dados local esteja ativado.
 
-- Crie um arquivo _.env_ na raiz do projeto e preencha com as credenciais de acesso do seu banco. Use o exemplo do _.env.example_. As tabelas, colunas e schemas serão configurados automaticamente pela aplicação, mas importante que informe um banco de dados e credenciais válidas.
+- Crie um arquivo _.env_ na raiz do projeto e preencha com as credenciais de acesso do seu banco. Use o exemplo do _.env.example_. As tabelas, colunas e schemas serão configurados automaticamente pela aplicação, mas é importante que informe um banco de dados e credenciais válidas.
 
 - Dentro da pasta raiz, inicie a api com o comando `yarn start`.
