@@ -1,5 +1,6 @@
 import { Table, Model, Column, DataType, HasMany } from 'sequelize-typescript'
 import { Address } from './ModelAddress'
+import { Animal } from './ModelAnimal'
 import { Contact } from './ModelContact'
 
 @Table({
@@ -18,4 +19,7 @@ export class Tutor extends Model {
 
   @HasMany(() => Contact)
   contacts!: Contact[]
+
+  @HasMany(() => Animal)
+  animals!: Animal[]
 }
