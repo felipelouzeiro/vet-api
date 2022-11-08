@@ -12,10 +12,10 @@ routers.put('/:id', CTutor.updateTutor)
 routers.delete('/:id', CTutor.deleteTutor)
 
 routers.post('/address', CAddress.createAddress)
-routers.get('/address/:id', CAddress.updateAddress)
-routers.put('/address/:id', CAddress.deleteAddress)
+routers.put('/address/:id', CAddress.updateAddress)
+routers.delete('/address/:id', CAddress.deleteAddress)
 
-routers.delete('/contact', CContact.createContact)
+routers.post('/contact', CContact.createContact)
 routers.put('/contact/:id', CContact.updateContact)
 routers.delete('/contact/:id', CContact.deleteContact)
 
