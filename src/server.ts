@@ -1,6 +1,11 @@
 import * as dotenv from 'dotenv'
 dotenv.config()
-import express from 'express'
+import express, {
+  NextFunction,
+  Response,
+  Request,
+  ErrorRequestHandler,
+} from 'express'
 import { urlencoded, json } from 'body-parser'
 import routers from './routes'
 import connection from './database/config'
@@ -14,6 +19,10 @@ app.use(json())
 app.use(urlencoded({ extended: true }))
 
 app.use('/', routers)
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  res.status(500).json({ message: err.message })
+})
 
 connection
   .sync()
